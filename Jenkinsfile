@@ -15,6 +15,11 @@ pipeline{
         sh 'mvn clean install'
       }
     }
+    stage('Debug') {
+    steps {
+        sh 'whoami'
+    }
+}
     stage('Deploy with ansible'){
       steps{
         sh 'ansible-playbook deploy.yml'
