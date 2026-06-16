@@ -11,7 +11,7 @@ pipeline{
       }
     }
     stage('Build'){
-      stpes{
+      steps{
         sh 'mvn clean install'
       }
     }
