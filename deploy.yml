@@ -1,5 +1,6 @@
 - hosts: localhost
   become: yes
+  gather_fact: false
   tasks:
     - name: Copy WAR file to Tomcat webapps directory
       copy:
